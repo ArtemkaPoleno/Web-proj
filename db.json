@@ -1,0 +1,51 @@
+{
+  "posts": [
+    {
+      "id": "9a27",
+      "title": "213123",
+      "content": "12312312"
+    },
+    {
+      "id": "aeee",
+      "title": "erwer",
+      "content": "werwerwer"
+    },
+    {
+      "id": "c97d",
+      "title": "",
+      "content": "dasd"
+    },
+    {
+      "id": "0539",
+      "title": "У МЕНЯ РАК",
+      "content": "Я УМРУ\n"
+    },
+    {
+      "id": "b5c9",
+      "title": "Привет",
+      "content": "sfdffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "id": "2ddf",
+      "title": "weqweqweqwe",
+      "content": "wqeqweqweqwe"
+    },
+    {
+      "id": "3a4b",
+      "title": "sdfsdfsdf",
+      "content": "dsfagfddddddddddddddddddddgdfghfshlfgdfsjhgijsdfhgjhsdfkgjhdfkgjhdsfkjghksdjfghkjdsfhgkdjsfhgkjhdfkjghdsfghsdfhgkdfhgkjdhfkgjhdfkghdsfkghsdfkjghdksfjgkdjfhgkdfhgkjdsfhgkjhsdfkjghdfkjghdfshgkdsjfhgksdfjhgkhfdkgjhsdfkghdfkgdjfhgkdfhgdfhgksdhfgkdsfkgjhdfskghkdjsfhgkdfhgkdsfhgjkhsdfjghdfsghdsfklghdlsfghsfghssssssssssssssssssssssssssssssssfghfdshfghfghfgh"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Анна",
+      "email": "anna@example.com"
+    },
+    {
+      "id": 2,
+      "name": "Иван",
+      "email": "ivan@example.com"
+    }
+  ]
+}
