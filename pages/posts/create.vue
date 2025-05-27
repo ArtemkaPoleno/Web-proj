@@ -15,7 +15,8 @@ const createPost = async () => {
 </script>
 <template>
   <div>
-    <h1>Создать пост ✏️</h1>
+    <h1>Создать пост
+    </h1>
     <input v-model="title" placeholder="Заголовок">
     <textarea v-model="content" placeholder="Текст"></textarea>
     <button @click="createPost">Опубликовать</button>
