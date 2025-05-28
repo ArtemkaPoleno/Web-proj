@@ -1,68 +1,39 @@
 <script setup>
-const route = useRoute()
-const errorMessage = ref('')
+const route = useRoute();
+const postId = Number(route.params.id);
+const { data: post } = await useAsyncData(`post-${route.params.id}`
+, () => 
+  $fetch(`http://localhost:3001/posts/${route.params.id}`)
+);
 
-// Явно преобразуем ID в число
-const postId = computed(() => Number(route.params.id))
-
-// Загрузка поста
-const { data: post } = await useAsyncData(`post-${postId.value}`, () => 
-  $fetch(`http://localhost:3001/posts/${postId.value}`)
-)
-
-// Загрузка комментариев
-const { data: comments, refresh } = await useAsyncData(`comments-${postId.value}`, () => 
-  $fetch(`http://localhost:3001/comments?postId=${postId.value}`)
-)
-
-// Форма комментария
+const { data: comments, refresh } = await useAsyncData(`comments-${route.params.id}`
+, () => 
+  $fetch(`http://localhost:3001/comments?postId=${route.params.id}`)
+);
+//создание комментария//
 const newComment = reactive({
-  postId: postId.value, // Используем computed значение
+  postId: postId,
   author: '',
   text: '',
   createdAt: new Date().toISOString()
 })
-
-// Создание комментария
 const addComment = async () => {
-  if (!newComment.text.trim() || !newComment.author.trim()) {
-    errorMessage.value = 'Заполните все поля!'
-    return
-  }
-
-  try {
-    // Проверяем данные перед отправкой
-    console.log('Отправляемые данные:', JSON.stringify({
-      ...newComment,
-      postId: postId.value
-    }))
-
-    await $fetch('http://localhost:3001/comments', {
-      method: 'POST',
-      body: {
-        ...newComment,
-        postId: postId.value // Явно передаём актуальное значение
-      },
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-
-    // Сброс формы
-    newComment.text = ''
-    newComment.author = ''
-    errorMessage.value = ''
-    refresh() // Обновляем список комментариев
-    
-  } catch (error) {
-    errorMessage.value = 'Ошибка при отправке комментария'
-    console.error('Ошибка:', error)
-  }
+  if (!newComment.text.trim() ||!newComment.author.trim() ) {
+    errorMessage.value = 'Поле не может быть пустым!'
+  }else{
+  await $fetch('http://localhost:3001/comments', {
+    method: 'POST',
+    body: newComment
+  });
+  newComment.text = ''
+  newComment.author = ''
+  refresh()
 }
-
+}
 const formatDate = (dateString) => {
   return new Date(dateString).toLocaleString()
 }
+
 </script>
 <template>
   <div>
