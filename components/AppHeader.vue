@@ -4,11 +4,11 @@
 <template>
   <header class="header">
     <div class="header__container">
-
+      <div class="text-box"><NuxtLink to="/posts" class="btn btn-white btn-animate">Посты</NuxtLink></div>
       <NuxtLink to="/" class="header__logo">
-        <img src="~/assets/images/logo.png" alt="Логотип" class="logo-image">
+        <img src="~/assets/images/logo.svg" alt="Логотип" class="logo-image">
       </NuxtLink>
-
+      <div class="text-box"><NuxtLink to="/create" class="btn btn-white btn-animate">Создать пост</NuxtLink></div>
      
     </div>
   </header>
@@ -16,12 +16,13 @@
 
 
 <style>
-header {
+.header__container {
     margin-bottom:20px;
     display:flex;
-    justify-content:center;
+    
+    justify-content:space-between;
     align-items:center;
-    background: #b6b6b6;
+    background: #ffffff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     .logo-image {
       height: 100px;
