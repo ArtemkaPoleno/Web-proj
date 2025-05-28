@@ -6,9 +6,9 @@
       : text;
     };
     const { data: posts } = await useAsyncData('posts', () => 
-    $fetch('http://localhost:3001/posts?_limit=3')
-    );
-</script>
+    $fetch('http://localhost:3001/posts?_limit=3'));
+    
+    </script>
   <template>
 
   <div>
@@ -28,10 +28,13 @@
 </template>
 <style lang="scss">
 body{
+   overflow-y: auto;
+  overflow-x: hidden;
   margin: 0;
   padding-left: 192px;
   padding-right: 192px;
-
+  font-family: 'Roboto';
+  height: 100%;
 }
 .content_main{
   display: flex;
@@ -41,9 +44,10 @@ body{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr ;
   gap: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .text-box{
+  align-items: center;
   width: 100%;
   display: flex;
   justify-content: center;
