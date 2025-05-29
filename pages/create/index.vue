@@ -41,12 +41,10 @@ const createPost = async () => {
   height: 50px;
 } 
 input::placeholder{
-  padding-left: 42%;
+  text-align: center;
 }
 textarea::placeholder{
-  position: absolute;
-  top: 50%;
-  left: 45%;
+  text-align: center;
 }
 .text{
   height: 500px;  
