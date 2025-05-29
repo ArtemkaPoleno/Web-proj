@@ -1,10 +1,6 @@
+
 <script setup>
-    const truncateText = (text, maxLenght) =>{
-      if(!text) return '';
-      return text.lenght > maxLenght
-      ? text.substring(0, maxLenght) + "..."
-      : text;
-    };
+   
     const { data: posts } = await useAsyncData('posts', () => 
     $fetch('http://localhost:3001/posts?_limit=3'));
     
@@ -15,12 +11,12 @@
     <AppHeader />
     <NuxtPage />
   </div>
-  
+  <h1>Недавние записи</h1>
   <div class="post-grid">
 
     <div class="post" v-for="post in posts" :key="post.id">
-      <h2>{{ truncateText(post.title, 10) }}</h2>
-      <p>{{ truncateText(post.content,20) }}</p>
+      <h2>{{post.title, 10 }}</h2>
+      <p>{{post.content,20 }}</p>
     </div>
   </div>
 
