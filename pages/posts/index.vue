@@ -116,6 +116,7 @@ h2 {
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+  
 }
 
 .read-more {
