@@ -42,21 +42,22 @@ const formatDate = (dateString) => {
 <div class="content_post">
     <div class="post-page post">
     <h1>{{ post.title }}</h1>
-    <div class="post-content">
-      <p>{{ post.content }}</p>
+    <div class="post-content big">
+      <p style="-webkit-line-clamp: 10;">{{ post.content }}</p>
     </div>
     <div class="back-link-div">
     <NuxtLink to="/posts" class="back-link">- К списку постов</NuxtLink>
     <NuxtLink :to="`/redact/${post.id}`" class="back-link">Отредакировать пост -</NuxtLink></div>
   </div>
   <div >
-    <div class="addcomm post-page post">
+    <div class="addcomm post-page">
       <form @submit.prevent="addComment">
-    <h2>Оставить комментарий</h2>  
-     <input v-model="newComment.author" placeholder="Ваше имя">
-     <textarea v-model="newComment.text" placeholder="Напишите что-нибудь" ></textarea> 
-    <button type="submit"class="btn btn-white btn-animate">Опубликовать</button>
-    <p style="color:red;" v-if="errorMessage">{{ errorMessage }}</p>
+    <h2>Оставить комментарий</h2> 
+     <div class="form"> 
+     <input class="inp  name" v-model="newComment.author" placeholder="Ваше имя">
+     <textarea class="comm" v-model="newComment.text" placeholder="Напишите что-нибудь" ></textarea> 
+    <button type="submit"class="btn btn-sub btn-white btn-animate">Опубликовать</button>
+    <p style="color:red;" v-if="errorMessage">{{ errorMessage }}</p></div>
 
     </form>
     </div>
@@ -77,8 +78,54 @@ const formatDate = (dateString) => {
 
 
 <style lang="scss">
+.btn-sub{
+  width: 50%;
+  border: 1px solid;
+  background: none;
+  border-radius: 100px;
+  height: 60px;
+}
+.name{
+border: 1px solid #cacaca;
+  
+  width: 30%;
+  border-radius: 30px;
+  height: 50px;
+}
+.name::placeholder{
 
+ text-align: center;
 
+}
+.comm{
+width: 500px;
+height: 300px;
+max-width: 800px;
+max-height: 300px;
+border: 1px solid #cacaca;
+  border-radius: 30px;
+}
+.comm::placeholder{
+  text-align: center;
+  font-size: large;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+}
+.addcomm{
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+
+}
+   
 .back-link-div{
   display: flex;
   justify-content: space-between;
