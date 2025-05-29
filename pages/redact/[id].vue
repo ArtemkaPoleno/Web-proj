@@ -36,11 +36,6 @@ const redactPost = async () => {
   
 };
 
-
-
-
-
-
 </script>
 <template>
   
@@ -59,25 +54,20 @@ const redactPost = async () => {
     <NuxtLink to="/posts" class="back-link">- К списку постов</NuxtLink>
     <p style="color:red;" v-if="errorMessage">{{ errorMessage }}</p>
   
-    <button class="back-link" @click="redactPost">Сохранить</button></div>
+    <button class="back-link but" @click="redactPost">Сохранить</button></div>
   </div>
-  <div class="crt">
-    <input class="inp title" type="text" v-model="title" >
-    <textarea class="inp text" v-model="content" ></textarea>
   
-    
-    <div class="link-div">
-    <NuxtLink to="/posts" class="back-link">- К списку постов</NuxtLink>
-    <p style="color:red;" v-if="errorMessage">{{ errorMessage }}</p>
-  
-    <button class="back-link" @click="redactPost">Сохранить</button></div>
-  </div>
 </template>
 <style>
 .link-div{
   display:flex;
   justify-content:space-around;
   width:50%
+     
 }
 
+.but{
+   background: none;
+   border: none;
+}
 </style>
