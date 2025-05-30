@@ -79,6 +79,36 @@
       "id": "16",
       "title": "Как я увеличил продуктивность в 3 раза с помощью 3 простых методов",
       "content": "Автор делится опытом использования техник планирования дня, метода Pomodoro для фокусировки и минимизации отвлекающих факторов. Эти простые методы помогли значительно повысить эффективность работы каждый день."
+    },
+    {
+      "id": "eed4",
+      "title": "Привет всем",
+      "content": "Лохи\n"
+    },
+    {
+      "id": "03fd",
+      "title": "привет",
+      "content": "олрпорп"
+    },
+    {
+      "id": "b894",
+      "title": "hfghfgh",
+      "content": "nvhbnfg"
+    },
+    {
+      "id": "37d5",
+      "title": "fgbhfdgh",
+      "content": "dfghdfhhhhhhhhhhhhhhhh"
+    },
+    {
+      "id": "a2e4",
+      "title": "ввыаыва",
+      "content": "выаваа"
+    },
+    {
+      "id": "afed",
+      "title": "привет",
+      "content": "как дела?\n"
     }
   ],
   "comments": [
@@ -144,6 +174,48 @@
       "author": "sasASas",
       "text": "aSasASasAS",
       "createdAt": "2025-05-29T08:14:38.128Z"
+    },
+    {
+      "id": "223d",
+      "postId": "2",
+      "author": "dsafsdf",
+      "text": "fsdffffffffffffffffff",
+      "createdAt": "2025-05-30T05:34:55.376Z"
+    },
+    {
+      "id": "d985",
+      "postId": "eed4",
+      "author": "Ты какашка",
+      "text": "Ну реально ведь\n",
+      "createdAt": "2025-05-30T05:35:38.543Z"
+    },
+    {
+      "id": "bbe1",
+      "postId": "2",
+      "author": "толриорио",
+      "text": "шгрпиориорпи",
+      "createdAt": "2025-05-30T06:58:56.001Z"
+    },
+    {
+      "id": "88c1",
+      "postId": "37d5",
+      "author": "dASDasdSDDDD",
+      "text": "asdfASDas",
+      "createdAt": "2025-05-30T07:36:12.431Z"
+    },
+    {
+      "id": "1c90",
+      "postId": "2",
+      "author": "dfgdfgdfgdfg",
+      "text": "fdgdfgdfgdddddddddddddddddddddd",
+      "createdAt": "2025-05-30T08:37:23.931Z"
+    },
+    {
+      "id": "279d",
+      "postId": "2",
+      "author": "я вас всех нена",
+      "text": "вы испортили мне день\n",
+      "createdAt": "2025-05-30T10:39:13.705Z"
     }
   ]
 }
