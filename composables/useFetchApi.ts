@@ -1,8 +1,7 @@
 export const useFetchApi = () => {
-  const runtimeConfig = useRuntimeConfig(); // Доступ к env-переменным
-  const baseURL = runtimeConfig.public.apiBase || 'http://localhost:3001'; // Из nuxt.config.ts
+  const runtimeConfig = useRuntimeConfig();
+  const baseURL = runtimeConfig.public.apiBase || 'http://localhost:3001'; 
 
-  // Общий обработчик запросов
   return $fetch.create({
     baseURL,
     headers: {
